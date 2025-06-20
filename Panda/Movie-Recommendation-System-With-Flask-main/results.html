@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommendations</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .list-group-item {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #2c3e50;
+      font-weight: 500;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .list-group-item:hover {
+      transform: scale(1.02);
+      background-color: #ecf0f1;
+    }
+
+    .btn-secondary {
+      margin-top: 25px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #34495e;
+      border: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: #2c3e50;
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Top 5 Recommendations Based on <br><span class="text-warning">"{{ movie_title }}"</span></h1>
+
+    <ul class="list-group text-left">
+      {% for movie in recommendations %}
+      <li class="list-group-item">{{ movie }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/" class="btn btn-secondary">⬅ Back to Home</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

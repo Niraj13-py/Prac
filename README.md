@@ -34,8 +34,12 @@ FastAPI, SQLAlchemy, Uvicorn
 css
 Copy
 Edit
+
 shopsmart_app/
+
+
 ├── models/
+
 
 ├── routes/
 

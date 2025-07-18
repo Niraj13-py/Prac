@@ -36,10 +36,16 @@ Copy
 Edit
 shopsmart_app/
 ├── models/
+
 ├── routes/
+
 ├── database.py
+
 ├── main.py
+
 └── requirements.txt
+
+
 ▶️ Run Locally
 bash
 Copy
